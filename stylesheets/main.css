@@ -1,0 +1,98 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,700,900,500,300,100);
+html {
+  font-size: 100%;
+  line-height: 0.25em;
+}
+
+*, *::before, *::after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 900;
+  text-transform: uppercase;
+  overflow: hidden;
+  *zoom: 1;
+}
+
+h1, h2 {
+  font-size: 4em;
+  line-height: 1.0625em;
+}
+
+.work-entry, .project-entry {
+  border: #ebebeb 0.0625em solid;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  padding: 1.5em;
+  margin: 0 0.5em;
+}
+.work-entry > a, .project-entry > a {
+  font-weight: 900;
+  text-decoration: none;
+  font-size: 1.5em;
+  line-height: 1.16667em;
+  display: block;
+  margin-bottom: 0.5em;
+}
+.work-entry .date-text, .project-entry .date-text {
+  margin-bottom: 1em;
+}
+
+p, li, div {
+  font-weight: 300;
+  line-height: 1.5em;
+  margin-top: 0em;
+  margin-bottom: 0em;
+}
+
+body {
+  font-family: "Roboto", serif;
+}
+
+#main > div {
+  overflow: hidden;
+  *zoom: 1;
+  max-width: 92%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1em;
+}
+
+#header h1, #header h2, #header h3, #header h4, #header h5, #header h6 {
+  text-transform: none;
+}
+
+#workExperience .items, #projects .items {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.work-entry {
+  display: inline-block;
+  -webkit-flex: 1 0;
+  flex: 1 0;
+}
+
+.project-entry {
+  display: inline-block;
+  -webkit-flex: 1 0;
+  flex: 1 0;
+}
+.project-entry img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
+  border-width: 0.0625em;
+  border-style: solid;
+  padding: 0.1875em;
+  border-color: #ababab;
+  margin-right: 0.5em;
+}

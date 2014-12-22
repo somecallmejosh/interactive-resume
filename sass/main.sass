@@ -1,0 +1,80 @@
+@import "compass"
+@import "compass/css3"
+$base-font-size: 16px
+$base-line-height: 4px
++establish-baseline
+$rem-with-px-fallback: true
+$panel-primary: #f4f4f4
+$border-color: #ebebeb
+$border-width: rhythm(.25)
+$default-border: $border-color $border-width solid
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,700,900,500,300,100)
+
+*, *::before, *::after
+  +box-sizing(border-box)
+
+$primary-font: 'Roboto', serif
+
+#{headings(all)}
+  font-weight: 900
+  text-transform: uppercase
+  +clearfix
+
+#{headings(2)}
+  +adjust-font-size-to(64px)
+
+%panel
+  border: $default-border
+  +border-radius(4px)
+  padding: rhythm(6)
+  margin: 0 rhythm(2)
+  > a
+    font-weight: 900
+    text-decoration: none
+    +adjust-font-size-to(24px)
+    display: block
+    +margin-trailer(2)
+  .date-text
+    +margin-trailer(4)
+
+
+p, li, div
+  font-weight: 300
+  +adjust-leading-to(6)
+  +margin-leader(0)
+  +margin-trailer(0)
+
+body
+  font-family: $primary-font
+
+#main > div
+  +clearfix
+  max-width: 92%
+  margin-left: auto
+  margin-right: auto
+  +margin-trailer(4)
+
+#header
+  #{headings(all)}
+    text-transform: none  
+
+#workExperience .items, #projects .items
+  +display-flex
+  +justify-content(center)
+  +flex-wrap(wrap)
+.work-entry
+  @extend %panel
+  display: inline-block
+  +flex(1 0)
+
+.project-entry
+  @extend %panel
+  display: inline-block
+  +flex(1 0)
+  img
+    max-width: 100%
+    height: auto
+    vertical-align: top
+    +rhythm-borders
+    border-color: darken($border-color, 25%)
+    margin-right: rhythm(2)

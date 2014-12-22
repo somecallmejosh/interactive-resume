@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Joshua Briley | Interactive Resume</title>
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="stylesheets/main.css">
+  <!--
+    There is no reason to call JQuery and helper.js in the head.
+    Doing so is not considered a best practice. They have been
+    moved to the footer.
+  -->
+</head>
+<body unresolved>
+  <!--
+    The original HTML structure from the project repo has been edited,
+    and cleaned. I removed all the superfluous classes and unecessary
+    "clearing" divs from the project. I am happy to defend this decision
+    if necessary.
+  -->
+  <div id="main">
+    <div id="header" class="row">
+      <ul id="topContacts" class='flex-box'></ul>
+    </div>
+    <div id="workExperience">
+      <h2>Work Experience</h2>
+      <div class="items"></div>
+    </div>
+    <div id="projects" class="row">
+      <h2>Projects</h2>
+      <div class="items"></div>
+    </div>
+    <div id="education" class="row">
+      <h2>Education</h2>
+      <div class="items"></div>
+    </div>
+    <div id="mapDiv">
+      <h2>Where I've Lived and Worked</h2>
+    </div>
+    <div id="letsConnect" class="row">
+      <h2>Let's Connect</h2>
+      <ul id="footerContacts"></ul>
+    </div>
+  </div>
+  <!--
+    I realize these scripts would be better served as a single
+    concatenated and minified file. Rather than jump the gun
+    on the Critical Rendering Path lesson, I will call each file
+    separately, even though it hurts me deeply to do so. :-p
+  -->
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
+  <script src="js/json/bio.js"></script>
+  <script src="js/json/education.js"></script>
+  <script src="js/json/projects.js"></script>
+  <script src="js/json/work.js"></script>
+  <script src="js/helper.js"></script>
+  <script src="js/resumeBuilder.js"></script>
+  <script type="text/javascript">
+    // These come from the original repo
+    if(document.getElementsByClassName('contact').length === 0) {
+      document.getElementById('topContacts').style.display = 'none';
+    }
+    if(document.getElementsByTagName('h1').length === 0) {
+      document.getElementById('header').style.display = 'none';
+    }
+    if(document.getElementsByClassName('work-entry').length === 0) {
+      document.getElementById('workExperience').style.display = 'none';
+    }
+    if(document.getElementsByClassName('project-entry').length === 0) {
+      document.getElementById('projects').style.display = 'none';
+    }
+    if(document.getElementsByClassName('education-entry').length === 0) {
+      document.getElementById('education').style.display = 'none';
+    }
+    if(document.getElementsByClassName('flex-item').length === 0) {
+      document.getElementById('letsConnect').style.display = 'none';
+    }
+    if(document.getElementById('map') === null) {
+      document.getElementById('mapDiv').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
