@@ -9,7 +9,7 @@ var bio = {
     "location" : "Manchester, CT"
   },
   "biopic" : "img/bio/bio-pic.jpg",
-  "welcomeMessage" : "Hi, I'm Josh. Yadda Yadda Yadda.",
+  "welcomeMessage" : "<strong>I fell in love with the web back in 1995</strong> while creating my very first Geocities website. Posting pictures and writing “reviews” of my favorite drummers led me to fun and interesting creative challenges. Each of these new challenges led me on quests through Dogpile and Alta Vista and (insert internet relic here). Interestingly, all my answers could be found through creative searching. There was definitely something more intriguing to this internet thing than my egotistical rantings about drummers. There was an opportunity for self improvement. There was adventure.",
   "skills" : [
     "Front End Developer", "UI Designer", "Musician", "Dad", "Husband"
   ],
@@ -23,21 +23,21 @@ var bio = {
         formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter),
         formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github),
         formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
+
     $("#header")
-      .append(formattedName)
-      .append(formattedRole)
+      .append(formattedName + formattedRole)
+      .append(formattedMobile)
+      .append(formattedLocation);
+    $(".introduction")
       .append(formattedBioPic)
       .append(formattedWelcomeMessage);
     $("#topContacts")
-      .append(formattedMobile)
       .append(formattedEmail)
       .append(formattedTwitter)
-      .append(formattedGithub)
-      .append(formattedLocation);
+      .append(formattedGithub);
 
     if (bio.skills.length > 0) {
-      var skill;
-      $("#header").append(HTMLskillsStart);
+      $(".skills").append(HTMLskillsStart);
       for (skill in bio.skills) {
         $("#skills").append(HTMLskills.replace("%data%", bio.skills[skill]));
       }

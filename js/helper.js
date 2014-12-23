@@ -12,16 +12,16 @@ Cameron Pittman
 These are HTML strings. As part of the course, you'll be using JavaScript functions
 replace the %data% placeholder text you see in them.
 */
-var HTMLheaderName = "<h1 id='name'>%data%</h1>";
-var HTMLheaderRole = "<span>%data%</span><hr/>";
+var HTMLheaderName = "<h1 id='name'>%data%";
+var HTMLheaderRole = " <em>%data%</em></h1>";
 
 var HTMLcontactGeneric = "<li class='contact'><span>%contact%</span><span>%data%</span></li>";
-var HTMLmobile = "<li class='contact'><span>mobile</span><span>%data%</span></li>";
-var HTMLemail = "<li class='contact'><span>email</span><span>%data%</span></li>";
-var HTMLtwitter = "<li class='contact'><span>twitter</span><span>%data%</span></li>";
-var HTMLgithub = "<li class='contact'><span>github</span><span>%data%</span></li>";
+var HTMLmobile = "<span>%data%</span>";
+var HTMLemail = "<li class='contact'><a href='mailto:%data%'><span class='fa fa-envelope'></span></a></li>";
+var HTMLtwitter = "<li class='contact'><a href='http://www.twitter.com/%data%'><span class='fa fa-twitter'></span></a></li>";
+var HTMLgithub = "<li class='contact'><a href='http://www.github.com/%data%'><span class='fa fa-github'></span></a></li>";
 var HTMLblog = "<li class='contact'><span>blog</span><span>%data%</span></li>";
-var HTMLlocation = "<li class='contact'><span>location</span><span>%data%</span></li>";
+var HTMLlocation = "<span>%data%</span><hr/>";
 
 var HTMLbioPic = "<img src='%data%' class='biopic'>";
 var HTMLWelcomeMsg = "<span class='welcome-message'>%data%</span>";
@@ -33,7 +33,7 @@ var HTMLworkStart = "<div class='work-entry'></div>";
 var HTMLworkEmployer = "<a href='#'>%data%";
 var HTMLworkTitle = " - %data%</a>";
 var HTMLworkDates = "<div class='date-text'>%data%</div>";
-var HTMLworkLocation = "<div class='location-text'>%data%</div>";
+var HTMLworkLocation = "<div>%data%</div>";
 var HTMLworkDescription = "<p>%data%</p>";
 
 var HTMLprojectStart = "<div class='project-entry'></div>";

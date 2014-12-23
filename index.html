@@ -5,23 +5,25 @@
   <title>Joshua Briley | Interactive Resume</title>
   <meta name="viewport" content="width=device-width">
   <link rel="stylesheet" href="stylesheets/main.css">
+
+  <!-- Add FontAwesome Icons -->
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <!--
-    There is no reason to call JQuery and helper.js in the head.
-    Doing so is not considered a best practice. They have been
-    moved to the footer.
+    JQuery and helper.js have been moved to the footer.
   -->
 </head>
 <body unresolved>
   <!--
-    The original HTML structure from the project repo has been edited,
+    The original HTML template structure from the project repo has been edited,
     and cleaned. I removed all the superfluous classes and unecessary
-    "clearing" divs from the project. I am happy to defend this decision
-    if necessary.
+    "clearing" divs from the project.
   -->
   <div id="main">
     <div id="header" class="row">
-      <ul id="topContacts" class='flex-box'></ul>
+      <ul id="topContacts"></ul>
     </div>
+    <div class="introduction"></div>
+    <div class="skills"></div>
     <div id="workExperience">
       <h2>Work Experience</h2>
       <div class="items"></div>
@@ -43,7 +45,7 @@
     </div>
   </div>
   <!--
-    I realize these scripts would be better served as a single
+    These scripts would be better served as a single,
     concatenated and minified file. Rather than jump the gun
     on the Critical Rendering Path lesson, I will call each file
     separately, even though it hurts me deeply to do so. :-p

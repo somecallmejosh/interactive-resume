@@ -32,11 +32,11 @@ var work = {
   "display" : function() {
     for (var job in work.jobs) {
       var job,
-      formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer),
-      formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title),
-      formattedDate = HTMLworkDates.replace("%data%", work.jobs[job].dates),
-      formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description),
-      formattedEmployerTitle = formattedEmployer + formattedTitle;
+          formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer),
+          formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title),
+          formattedDate = HTMLworkDates.replace("%data%", work.jobs[job].dates),
+          formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description),
+          formattedEmployerTitle = formattedEmployer + formattedTitle;
 
       $("#workExperience .items").append(HTMLworkStart);
       $(".work-entry:last")

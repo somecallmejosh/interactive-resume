@@ -13,6 +13,7 @@ html {
 h1, h2, h3, h4, h5, h6 {
   font-weight: 900;
   text-transform: uppercase;
+  clear: both;
   overflow: hidden;
   *zoom: 1;
 }
@@ -22,7 +23,7 @@ h1, h2 {
   line-height: 1.0625em;
 }
 
-.work-entry, .project-entry {
+#topContacts li, #skills li, .work-entry, .project-entry {
   border: #ebebeb 0.0625em solid;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
@@ -30,7 +31,7 @@ h1, h2 {
   padding: 1.5em;
   margin: 0 0.5em;
 }
-.work-entry > a, .project-entry > a {
+#topContacts li > a, #skills li > a, .work-entry > a, .project-entry > a {
   font-weight: 900;
   text-decoration: none;
   font-size: 1.5em;
@@ -38,8 +39,20 @@ h1, h2 {
   display: block;
   margin-bottom: 0.5em;
 }
-.work-entry .date-text, .project-entry .date-text {
+#topContacts li .date-text, #skills li .date-text, .work-entry .date-text, .project-entry .date-text {
   margin-bottom: 1em;
+}
+
+#topContacts, #skills {
+  margin: 0;
+  padding: 0;
+}
+#topContacts li, #skills li {
+  -webkit-flex: 1 0;
+  flex: 1 0;
+  list-style: none;
+  text-align: center;
+  list-style: none;
 }
 
 p, li, div {
@@ -66,13 +79,35 @@ body {
   text-transform: none;
 }
 
-#workExperience .items, #projects .items {
+#workExperience .items, #projects .items, #skills, #topContacts {
   display: -webkit-flex;
   display: flex;
-  -webkit-justify-content: center;
-  justify-content: center;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 750px) {
+  #workExperience .items, #projects .items, #skills, #topContacts {
+    display: block;
+  }
+}
+#topContacts span::before {
+  padding-right: 0.25em;
+}
+
+.biopic {
+  float: left;
+  margin-right: 1em;
+  max-width: 200px;
+  height: auto;
+}
+
+.welcome-message {
+  font-size: 1.5em;
+  line-height: 1.16667em;
+  line-height: 1.5em;
 }
 
 .work-entry {
@@ -95,4 +130,14 @@ body {
   padding: 0.1875em;
   border-color: #ababab;
   margin-right: 0.5em;
+}
+
+#map {
+  display: block;
+  height: 100%;
+}
+
+#mapDiv {
+  height: 600px;
+  width: 100%;
 }
