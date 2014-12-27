@@ -1,6 +1,8 @@
 body
   background-color: lighten($black, 80%)
   // +debug-vertical-alignment
+  +mq(medium)
+    padding-top: rhythm(4)
 p, ul, ol, td
   +trailer
 a
@@ -14,12 +16,20 @@ header
   display: block
   +trailing-border
   border-color: lighten($black, 70%)
+  width: 100%
   background-color: #FFF
+  z-index: $z-top
   +mq(small)
     text-align: center
+    position: relative
   +mq(medium)
     height: rhythm(4)
     +margin-trailer
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+
 
 .identity__tagline
   font-weight: 300

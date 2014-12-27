@@ -256,6 +256,8 @@ html {
 #mapDiv {
   height: 27em;
   width: 100%;
+  position: relative;
+  z-index: 100;
   overflow: hidden;
   *zoom: 1;
   margin-bottom: 1.5em;
@@ -465,6 +467,11 @@ html {
 body {
   background-color: #f2f2f2;
 }
+@media (min-width: 769px) {
+  body {
+    padding-top: 6em;
+  }
+}
 
 p, ul, ol, td {
   margin-bottom: 1.5em;
@@ -502,17 +509,24 @@ header {
   border-bottom-style: solid;
   padding-bottom: 1.4375em;
   border-color: #d9d9d9;
+  width: 100%;
   background-color: #FFF;
+  z-index: 1000;
 }
 @media (min-width: 1px) and (max-width: 768px) {
   header {
     text-align: center;
+    position: relative;
   }
 }
 @media (min-width: 769px) {
   header {
     height: 6em;
     margin-bottom: 1.5em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
   }
 }
 

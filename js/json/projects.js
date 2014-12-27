@@ -5,8 +5,8 @@ var projects = {
       "dates" : "Aug 2014",
       "description" : "AngularFire website that allows easy direct editing of page contents.",
       "images" : [
-        "img/projects/kenwood-dennard.png"
-        //"img/projects/kenwood-editable.png"
+        "img/projects/kenwood-dennard.png",
+        "img/projects/kenwood-editable.png"
       ]
     },
     {
@@ -14,7 +14,7 @@ var projects = {
       "dates" : "Jul 2013 - May 2014",
       "description" : "College recruiting website that displays seasonal statistics and video highlights.",
       "images" : [
-        //"img/projects/chase-the-kicker.png",
+        "img/projects/chase-the-kicker.png",
         "img/projects/chase-the-kicker-bio.png"
       ]
     },
