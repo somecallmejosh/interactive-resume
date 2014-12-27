@@ -254,8 +254,11 @@ html {
 }
 
 #mapDiv {
-  height: 600px;
+  height: 27em;
   width: 100%;
+  overflow: hidden;
+  *zoom: 1;
+  margin-bottom: 1.5em;
 }
 
 .nav__contact {
@@ -483,6 +486,16 @@ a:active {
   color: #C72F2D;
 }
 
+h2 {
+  font-size: 1.5em;
+  line-height: 2em;
+}
+
+h3 {
+  font-size: 1.25em;
+  line-height: 1.2em;
+}
+
 header {
   display: block;
   border-bottom-width: 0.0625em;
@@ -557,9 +570,23 @@ header {
   margin-bottom: 0.8em;
 }
 
-.section__meta h1 {
+.welcome-message h1 {
   line-height: 1.2em;
   text-shadow: 1px 1px 0 #fff;
+}
+
+.work-entry, .project-entry {
+  background-color: #fff;
+  padding: 16px;
+}
+.work-entry > a, .project-entry > a {
+  display: block;
+  font-size: 1.25em;
+  line-height: 1.2em;
+  margin-bottom: 1.5em;
+}
+.work-entry p, .project-entry p {
+  margin-bottom: 1.5em;
 }
 
 footer {
@@ -570,4 +597,15 @@ footer {
   border-top-style: solid;
   padding-top: 1.4375em;
   border-color: #d9d9d9;
+}
+footer p {
+  margin-bottom: 0em;
+}
+footer p.call {
+  color: #081A26;
+  font-weight: 400;
+}
+footer button {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
 }

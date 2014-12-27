@@ -31,12 +31,12 @@ var HTMLheaderName = "<h1 class='identity__title'>%data%</h1>",
 // -----------------------------------------------------------------------------
 // Work Information.
 // -----------------------------------------------------------------------------
-var HTMLworkStart = "<div class='work-entry'></div>",
+var HTMLworkStart = "<div class='col--3 work-entry'></div>",
     HTMLworkEmployer = "<a href='#'>%data%",
     HTMLworkTitle = " - %data%</a>",
     HTMLworkDates = "<div class='date-text'>%data%</div>",
     HTMLworkLocation = "<div>%data%</div>",
-    HTMLworkDescription = "<p>%data%</p>";
+    HTMLworkDescription = "%data%";
 
 // -----------------------------------------------------------------------------
 // Education Information.
@@ -60,7 +60,7 @@ var HTMLonlineClasses = "<h3>Online Classes</h3>",
 // -----------------------------------------------------------------------------
 // Project Information.
 // -----------------------------------------------------------------------------
-var HTMLprojectStart = "<div class='project-entry'></div>",
+var HTMLprojectStart = "<div class='col--4 project-entry'></div>",
     HTMLprojectTitle = "<a href='#'>%data%</a>",
     HTMLprojectDates = "<div class='date-text'>%data%</div>",
     HTMLprojectDescription = "<p>%data%</p>",

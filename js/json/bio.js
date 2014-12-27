@@ -49,7 +49,7 @@ var bio = {
     $(".site-name").append(bio.name);
     $(".role").append(formattedRole);
     $(".welcome-message").append(formattedWelcomeMessage);
-    $("footer").append(formattedPhone);
+    $("footer div").prepend(formattedPhone);
     $(".nav__contact")
       .append(formattedEmail)
       .append(formattedFacebook)

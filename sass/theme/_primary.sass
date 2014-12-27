@@ -5,6 +5,11 @@ p, ul, ol, td
   +trailer
 a
   +link-colors($color-secondary, $color-primary, $color-accent, $color-secondary, $color-accent)
+
+h2
+  +adjust-font-size-to(24px)
+h3
+  +adjust-font-size-to(20px)
 header
   display: block
   +trailing-border
@@ -53,14 +58,31 @@ header
     +adjust-font-size-to(30px)
     margin-bottom: rhythm(1, 30px)
 
-.section__meta
+.welcome-message
   h1
     +adjust-leading-to(1.5, 30px)
     +text-shadow
 
+.work-entry, .project-entry
+  background-color: $white
+  padding: $padding-double
+  > a
+    display: block
+    +adjust-font-size-to(20px)
+    +margin-trailer
+  p
+    +margin-trailer
 footer
   text-align: center
   color: lighten($black, 50%)
   +text-shadow
   +leading-border
   border-color: lighten($black, 70%)
+  p
+    +margin-trailer(0)
+  p.call
+    color: $dark-blue
+    font-weight: 400
+  button
+    +leader
+    +trailer
