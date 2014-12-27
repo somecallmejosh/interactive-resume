@@ -50,3 +50,5 @@ var projects = {
     }
   }
 }
+
+projects.display();

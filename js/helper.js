@@ -1,63 +1,80 @@
-/*
-
-This file contains all of the code running in the background that makes resumeBuilder.js possible. We call these helper functions because they support your code in this course.
-
-Don't worry, you'll learn what's going on in this file throughout the course. You won't need to make any changes to it until you start experimenting with inserting a Google Map in Problem Set 3.
-
-Cameron Pittman
-*/
-
+// -----------------------------------------------------------------------------
+// Bio Information.
+// -----------------------------------------------------------------------------
 
 /*
-These are HTML strings. As part of the course, you'll be using JavaScript functions
-replace the %data% placeholder text you see in them.
+  This information is share throughout the project in the header and the footer.
+  The Skills and welcome message can be viewed on the home page.
+  I have intentionally excluded the bio pic.
 */
-var HTMLheaderName = "<h1 id='name'>%data%";
-var HTMLheaderRole = " <em>%data%</em></h1>";
+var HTMLheaderName = "<h1 class='identity__title'>%data%</h1>",
+    HTMLheaderRole = "<h2 class='identity__tagline'>%data%</h2>",
+    HTMLWelcomeMsg = "%data%",
+    HTMLmobile = "<p class='call'><strong>Phone</strong>: %data%</p>",
+    HTMLcontactStart = "<li class='nav__contact--link'>",
+    HTMLcontactEnd = "</li>",
+    HTMLemail = HTMLcontactStart + "<a href='mailto:%data%' class='contact--link__email'><i class='icon-email'></i></a>" + HTMLcontactEnd,
+    HTMLfacebook = HTMLcontactStart + "<a href='%data%' class='contact--link__facebook' target='_blank'><i class='icon-facebook'></i></a>" + HTMLcontactEnd,
+    HTMLtwitter = HTMLcontactStart + "<a href='%data%' class='contact--link__twitter' target='_blank'><i class='icon-twitter'></i></a>" + HTMLcontactEnd,
+    HTMLlinkedIn = HTMLcontactStart + "<a href='%data%' class='contact--link__linkedin' target='_blank'><i class='icon-linkedin'></i></a>" + HTMLcontactEnd,
+    HTMLgitHub = HTMLcontactStart + "<a href='%data%' class='contact--link__github' target='_blank'><i class='icon-github'></i></a>" + HTMLcontactEnd,
+    HTMLDribbble = HTMLcontactStart + "<a href='%data%' class='contact--link__dribbble' target='_blank'><i class='icon-dribbble'></i></a>" + HTMLcontactEnd,
+    HTMLlocation = "<span>%data%</span>",
+    HTMLskillsStart = "<aside class='col--4 teaser__item'></aside>",
+    HTMLSkillTitle = "<h2>%data%</h2>",
+    HTMLSkillSubTitle = "<p>%data%</p>",
+    HTMLSkillLargeImage = "<img src='%data%' alt='Portfolio Image' class='img-responsive is-hidden-mobile'>",
+    HTMLSkillSmallImage = "<img src='%data%' alt='Portfolio Image' class='img-responsive is-hidden-not-mobile'>";
 
-var HTMLcontactGeneric = "<li class='contact'><span>%contact%</span><span>%data%</span></li>";
-var HTMLmobile = "<span>%data%</span>";
-var HTMLemail = "<li class='contact'><a href='mailto:%data%'><span class='fa fa-envelope'></span></a></li>";
-var HTMLtwitter = "<li class='contact'><a href='http://www.twitter.com/%data%'><span class='fa fa-twitter'></span></a></li>";
-var HTMLgithub = "<li class='contact'><a href='http://www.github.com/%data%'><span class='fa fa-github'></span></a></li>";
-var HTMLblog = "<li class='contact'><span>blog</span><span>%data%</span></li>";
-var HTMLlocation = "<span>%data%</span><hr/>";
+    var internationalizeButton = "<button>Internationalize</button>";
 
-var HTMLbioPic = "<img src='%data%' class='biopic'>";
-var HTMLWelcomeMsg = "<span class='welcome-message'>%data%</span>";
+// -----------------------------------------------------------------------------
+// Work Information.
+// -----------------------------------------------------------------------------
+var HTMLworkStart = "<div class='work-entry'></div>",
+    HTMLworkEmployer = "<a href='#'>%data%",
+    HTMLworkTitle = " - %data%</a>",
+    HTMLworkDates = "<div class='date-text'>%data%</div>",
+    HTMLworkLocation = "<div>%data%</div>",
+    HTMLworkDescription = "<p>%data%</p>";
 
-var HTMLskillsStart = "<h3 id='skillsh3'>Skills at a Glance:</h3><ul id='skills'></ul>";
-var HTMLskills = "<li><span>%data%</span></li>";
+// -----------------------------------------------------------------------------
+// Education Information.
+// -----------------------------------------------------------------------------
 
-var HTMLworkStart = "<div class='work-entry'></div>";
-var HTMLworkEmployer = "<a href='#'>%data%";
-var HTMLworkTitle = " - %data%</a>";
-var HTMLworkDates = "<div class='date-text'>%data%</div>";
-var HTMLworkLocation = "<div>%data%</div>";
-var HTMLworkDescription = "<p>%data%</p>";
+// Traditional Education
+var HTMLschoolStart = "<div class='education-entry'></div>",
+    HTMLschoolName = "<a href='#'>%data%",
+    HTMLschoolDegree = " -- %data%</a>",
+    HTMLschoolDates = "<div class='date-text'>%data%</div>",
+    HTMLschoolLocation = "<div class='location-text'>%data%</div>",
+    HTMLschoolMajor = "<em>Major: %data%</em>";
 
-var HTMLprojectStart = "<div class='project-entry'></div>";
-var HTMLprojectTitle = "<a href='#'>%data%</a>";
-var HTMLprojectDates = "<div class='date-text'>%data%</div>";
-var HTMLprojectDescription = "<p>%data%</p>";
-var HTMLprojectImage = "<img src='%data%'>";
+// Online Education
+var HTMLonlineClasses = "<h3>Online Classes</h3>",
+    HTMLonlineTitle = "<a href='#'>%data%",
+    HTMLonlineSchool = " - %data%</a>",
+    HTMLonlineDates = "<div class='date-text'>%data%</div>",
+    HTMLonlineURL = "<a href='#'>%data%</a>";
 
-var HTMLschoolStart = "<div class='education-entry'></div>";
-var HTMLschoolName = "<a href='#'>%data%";
-var HTMLschoolDegree = " -- %data%</a>";
-var HTMLschoolDates = "<div class='date-text'>%data%</div>";
-var HTMLschoolLocation = "<div class='location-text'>%data%</div>";
-var HTMLschoolMajor = "<em>Major: %data%</em>";
+// -----------------------------------------------------------------------------
+// Project Information.
+// -----------------------------------------------------------------------------
+var HTMLprojectStart = "<div class='project-entry'></div>",
+    HTMLprojectTitle = "<a href='#'>%data%</a>",
+    HTMLprojectDates = "<div class='date-text'>%data%</div>",
+    HTMLprojectDescription = "<p>%data%</p>",
+    HTMLprojectImage = "<img src='%data%' class='img-responsive'>";
 
-var HTMLonlineClasses = "<h3>Online Classes</h3>";
-var HTMLonlineTitle = "<a href='#'>%data%";
-var HTMLonlineSchool = " - %data%</a>";
-var HTMLonlineDates = "<div class='date-text'>%data%</div>";
-var HTMLonlineURL = "<a href='#'>%data%</a>";
-
-var internationalizeButton = "<button>Internationalize</button>";
+// -----------------------------------------------------------------------------
+// Google Map Information.
+// -----------------------------------------------------------------------------
+/*
+  I understand the value of this in terms of education, however I do not believe
+  it offers any value to a resume. It's merely superfluous "I can do this" type
+  design treatment. It is included only because the course requires it.
+*/
 var googleMap = "<div id='map'></div>";
-
 
 /*
 The International Name challenge in Lesson 2 where you'll create a function that will need this helper code to run. Don't delete! It hooks up your code to the button you'll be appending.
@@ -68,8 +85,6 @@ $(document).ready(function() {
     $('#name').html(iName);
   });
 })
-
-
 
 /*
 The next few lines about clicks are for the Collecting Click Locations quiz in Lesson 2.
@@ -117,7 +132,13 @@ function initializeMap() {
 
   // This next line makes `map` a new Google Map JavaScript Object and attaches it to
   // <div id="map">, which is appended as part of an exercise late in the course.
-  map = new google.maps.Map(document.querySelector('#map'), mapOptions);
+
+  /*
+    I am not calling the google map in every page. Only those that require it.
+  */
+  if(typeof google !== 'undefined') {
+    map = new google.maps.Map(document.querySelector('#map'), mapOptions);
+  };
 
 
 
@@ -222,16 +243,17 @@ function initializeMap() {
       service.textSearch(request, callback);
     }
   }
+  if(typeof google !== 'undefined') {
+    // Sets the boundaries of the map based on pin locations
+    window.mapBounds = new google.maps.LatLngBounds();
 
-  // Sets the boundaries of the map based on pin locations
-  window.mapBounds = new google.maps.LatLngBounds();
+    // locations is an array of location strings returned from locationFinder()
+    locations = locationFinder();
 
-  // locations is an array of location strings returned from locationFinder()
-  locations = locationFinder();
-
-  // pinPoster(locations) creates pins on the map for each location in
-  // the locations array
-  pinPoster(locations);
+    // pinPoster(locations) creates pins on the map for each location in
+    // the locations array
+    pinPoster(locations);
+  }
 
 }
 

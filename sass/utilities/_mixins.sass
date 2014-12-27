@@ -1,0 +1,43 @@
+// BEM selectors
+=e($element)
+  &__#{$element}
+    @content
+=m($modifier)
+  &--#{$modifier}
+    @content
+
+// Media Queries
+=mq($break)
+  @if $break == "small"
+    @media (min-width: $brkpoint--sm) and (max-width: $brkpoint--md)
+      @content
+  @else if $break == "medium"
+    @media (min-width: $brkpoint--md + 1)
+      @content
+  @else if $break == "large"
+    @media (min-width: $brkpoint--lg)
+      @content
+  @else
+    @error "No value could be retrieved for `#{$break}`. "
+
+// Adjacent sibling margins
+=doubly($margin: 1em)
+  & + &
+    margin-left: $margin
+    @content
+
+=g-columns
+  @for $i from 1 through $g-col-count
+    $context: g-context($g-col-width, $g-col-count ,$g-gutter-width) !global
+    $target: ($g-col-width * $i) + ($g-gutter-width * ($i - 1))
+    &--#{$i}
+      width: percentage($target / $context)
+
+=text-shadow($color: $white)
+  text-shadow: 1px 1px 0 $color
+  
+=ellipsis($width: 100%)
+  width: $width
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis

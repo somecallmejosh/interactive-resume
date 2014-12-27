@@ -1,0 +1,49 @@
+.nav__contact
+  margin: 0
+  padding: 0
+.nav__contact--link
+  +inline-block
+.nav__contact--link
+  text-decoration: none
+  +transition(all .2s ease-in-out)
+  i
+    +adjust-font-size-to(30px)
+    color: lighten($black, 60%)
+    +text-shadow
+  &:hover, &:active
+    +transform(scale(1.2))
+[class^="contact--link__"]
+  text-decoration: none
+.contact--link__
+  &email
+    &:hover
+      i
+        color: $color-email
+  &dribbble
+    &:hover
+      i
+        color: $color-dribbble
+  &twitter
+    &:hover
+      i
+        color: $color-twitter
+  &facebook
+    &:hover
+      i
+        color: $color-facebook
+  &linkedin
+    &:hover
+      i
+        color: $color-linkedin
+  &google
+    &:hover
+      i
+        color: $color-google
+  &github
+    &:hover
+      i
+        color: $color-github
+  &skype
+    &:hover
+      i
+        color: $color-skype

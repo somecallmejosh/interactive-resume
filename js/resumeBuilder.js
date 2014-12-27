@@ -1,5 +1,13 @@
 // Internationalization
 // Ensure name takes on the format "Firstname LASTNAME"
+
+/*
+  Like the google map inclusion, I understand the value in this from an
+  educational perspective, but it offers no functional value to the user who
+  would be reading an online resume. It is included only because the course
+  requires it.
+*/
+
 function inName() {
   // split the name object into two separate strings
   bio.name = bio.name.trim().split(" ");
@@ -10,14 +18,6 @@ function inName() {
   bio.name[0] = bio.name[0].slice(0,1).toUpperCase() + bio.name[0].slice(1).toLowerCase();
   return bio.name[0] + " " + bio.name[1];
 }
-
-// Append Projects
-bio.display();
-projects.display();
-work.display();
-
-
-
-$("#main").append(internationalizeButton);
+$("footer").append(internationalizeButton);
 
 $("#mapDiv").append(googleMap);

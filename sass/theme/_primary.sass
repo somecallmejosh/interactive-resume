@@ -1,0 +1,66 @@
+body
+  background-color: lighten($black, 80%)
+  // +debug-vertical-alignment
+p, ul, ol, td
+  +trailer
+a
+  +link-colors($color-secondary, $color-primary, $color-accent, $color-secondary, $color-accent)
+header
+  display: block
+  +trailing-border
+  border-color: lighten($black, 70%)
+  background-color: #FFF
+  +mq(small)
+    text-align: center
+  +mq(medium)
+    height: rhythm(4)
+    +margin-trailer
+
+.identity__tagline
+  font-weight: 300
+  padding: 0
+  margin: 0
+  text-align: center
+  +adjust-font-size-to(24px)
+  +text-shadow
+  strong
+    font-weight: 300
+    color: $color-accent
+  +mq(medium)
+    +adjust-leading-to(4, 24px)
+
+.identity__title
+  font-weight: 700
+  white-space: nowrap
+  +text-shadow
+  +adjust-font-size-to(36px)
+  +mq(medium)
+    +adjust-leading-to(4, 36px)
+
+.nav__primary--link
+  width: 33%
+  &.active
+    a
+      color: $color-active-nav
+  +mq(medium)
+    +adjust-leading-to(4, 16px)
+
+
+.main
+  +leader(2)
+  +padding-trailer(2)
+  h1
+    +adjust-font-size-to(30px)
+    margin-bottom: rhythm(1, 30px)
+
+.section__meta
+  h1
+    +adjust-leading-to(1.5, 30px)
+    +text-shadow
+
+footer
+  text-align: center
+  color: lighten($black, 50%)
+  +text-shadow
+  +leading-border
+  border-color: lighten($black, 70%)

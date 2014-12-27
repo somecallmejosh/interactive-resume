@@ -46,3 +46,4 @@ var work = {
     }
   }
 }
+work.display();

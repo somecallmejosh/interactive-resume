@@ -2,29 +2,32 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Joshua Briley Résumé</title>
+  <title>Joshua Briley Mock Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="stylesheets/main.css">
 </head>
-<body unresolved>
+<body>
   <header>
     <div class="row">
       <div class="col--3 identity"></div>
       <div class="col--6 role"></div>
       <div class="col--3">
         <ul class="nav__primary">
-          <li class="nav__primary--link active"><a href="/">Home</a></li>
+          <li class="nav__primary--link"><a href="/">Home</a></li>
           <li class="nav__primary--link"><a href="resume.html">Résumé</a></li>
-          <li class="nav__primary--link"><a href="projects.html">Projects</a></li>
+          <li class="nav__primary--link active"><a href="projects.html">Projects</a></li>
         </ul>
       </div>
     </div>
   </header>
+
   <div class="row main">
-    <div class="col--3 welcome-message"></div>
-    <div class="col--9">
-      <section class="row teasers"><!-- injected with Javascript --></div>
+    <h1>Projects</h1>
+    <div id="projects">
+      <div class="items"><!-- injected via javascript --></div>
+    </div>
   </div>
+
   <footer class="row">
     <div class="col--12">
       <ul class="nav__contact"><!-- injected with Javascript --></ul>
@@ -36,14 +39,16 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src="js/helper.js"></script>
   <script src="js/json/bio.js"></script>
+  <script src="js/json/projects.js"></script>
   <script src="js/resumeBuilder.js"></script>
+
   <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-55584826-1', 'auto');
-  ga('send', 'pageview');
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-55584826-1', 'auto');
+    ga('send', 'pageview');
   </script>
 </body>
 </html>

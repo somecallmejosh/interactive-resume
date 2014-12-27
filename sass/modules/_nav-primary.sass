@@ -1,0 +1,16 @@
+.nav__primary
+  +horizontal-list-container
+  margin: 0
+  padding: 0
+  text-align: center
+.nav__primary--link
+  +horizontal-list-item
+  +adjust-font-size-to(16px)
+  a
+    display: block
+    width: 100%
+    text-decoration: none
+    +text-shadow
+  &.active
+    a
+      pointer-events: none

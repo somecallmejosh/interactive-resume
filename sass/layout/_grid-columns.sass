@@ -1,0 +1,19 @@
+// Generates grid columns
+
+.col
+  +mq(medium)
+    +g-columns
+
+// Column styles
+[class^="col--"]
+  +mq(small)  
+    margin-top: em(12px)
+    margin-bottom: em(12px)
+  +mq(medium) 
+    +doubly(percentage($g-gutter-width / $context))
+    float: left
+    min-height: 1px
+    padding-left: 10px
+    padding-right: 10px
+    &:last-of-type
+      float: right
