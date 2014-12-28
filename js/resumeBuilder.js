@@ -18,6 +18,8 @@ function inName() {
   bio.name[0] = bio.name[0].slice(0,1).toUpperCase() + bio.name[0].slice(1).toLowerCase();
   return bio.name[0] + " " + bio.name[1];
 }
+
+
 $("footer").append(internationalizeButton);
 
 $("#mapDiv").append(googleMap);
