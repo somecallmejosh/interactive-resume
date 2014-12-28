@@ -3,9 +3,9 @@
 // -----------------------------------------------------------------------------
 
 /*
-  This information is share throughout the project in the header and the footer.
+  This information is shared throughout the project in the header and the footer.
   The Skills and welcome message can be viewed on the home page.
-  I have intentionally excluded the bio pic.
+  I have intentionally excluded the bio pic from the project.
 */
 var HTMLheaderName = "<h1 class='identity__title'>%data%</h1>",
     HTMLheaderRole = "<h2 class='identity__tagline'>%data%</h2>",
@@ -74,11 +74,6 @@ var HTMLprojectStart = "<div class='col--4 project-entry'></div>",
 // -----------------------------------------------------------------------------
 // Google Map Information.
 // -----------------------------------------------------------------------------
-/*
-  I understand the value of this in terms of education, however I do not believe
-  it offers any value to a resume. It's merely superfluous "I can do this" type
-  design treatment. It is included only because the course requires it.
-*/
 var googleMap = "<div id='map'></div>";
 
 /*

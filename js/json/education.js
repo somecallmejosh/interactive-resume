@@ -74,7 +74,10 @@ var education = {
     }
   ],
   "display" : function() {
+    // Loop through all the "schools" above and present the formatted data
+    // in the appropriate containers in the view.
     for(school in education.schools) {
+      // set school path variable, so I don't have to rewrite it over and over
       var schoolPath = education.schools[school],
           formattedName = HTMLschoolName.replace("%data%", schoolPath.name),
           formattedUrl = HTMLschoolUrl.replace("%data%", schoolPath.schoolUrl),
@@ -95,7 +98,10 @@ var education = {
           }
         };
     }
+    // Loop through the "onlineCourses" in the JSON above, and present the
+    // formatted dta in the appropriate containers in the view.
     for(course in education.onlineCourses) {
+      // set coursePath variable, so I don't have to rewrite it over and over
       var coursePath = education.onlineCourses[course],
           formattedTitle = HTMLcourseTitle.replace("%data%", coursePath.title),
           formattedSchool = HTMLcourseSchool.replace("%data%", coursePath.school),
@@ -112,4 +118,5 @@ var education = {
   }
 }
 
+// Invoke the education.display function, so it properly renders.
 education.display();

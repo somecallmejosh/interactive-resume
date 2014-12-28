@@ -1,13 +1,13 @@
-// Internationalization
-// Ensure name takes on the format "Firstname LASTNAME"
-
 /*
-  Like the google map inclusion, I understand the value in this from an
-  educational perspective, but it offers no functional value to the user who
-  would be reading an online resume. It is included only because the course
-  requires it.
+  I have elected to "partialize"the JSON files and serve them throughout this
+  project as they are needed. The data is not all presented on the same page.
 */
 
+
+/*
+  Internationalization
+  Ensure name takes on the format "Firstname LASTNAME"
+*/
 function inName() {
   // split the name object into two separate strings
   bio.name = bio.name.trim().split(" ");
@@ -19,7 +19,8 @@ function inName() {
   return bio.name[0] + " " + bio.name[1];
 }
 
-
+// This appends the "internationalize" button in the footer
 $("footer").append(internationalizeButton);
 
+// This includes the google map on the resume page.
 $("#mapDiv").append(googleMap);

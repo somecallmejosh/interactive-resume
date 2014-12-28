@@ -50,12 +50,11 @@ var work = {
 
       $("#workExperience .items").append(HTMLworkStart);
       $(".work-entry:last")
-      .append(formattedLogo)
-      .append(formattedTitle)
-      .append(formattedURL + formattedEmployer)
-      // .append(formattedEmployer)
-      .append(formattedDate)
-      .append(formattedDescription);
+        .append(formattedLogo)
+        .append(formattedTitle)
+        .append(formattedURL + formattedEmployer)
+        .append(formattedDate)
+        .append(formattedDescription);
     }
   }
 }
