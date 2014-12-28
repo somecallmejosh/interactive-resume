@@ -58,7 +58,7 @@ var HTMLCourseStart = "<div class='course-entry'></div>",
     HTMLcourseTitle = "<h2>%data% - ",
     HTMLcourseSchool = "%data%</h2>",
     HTMLcourseDescription = "<p>%data%</p>",
-    HTMLcourseDates = "<p>%data%</p>",
+    HTMLcourseDates = "<p>Course Attended: %data%</p>",
     HTMLcourseURL = "<p><a href='%data%' target='_blank'>View Course</a></p>";
 
 // -----------------------------------------------------------------------------
