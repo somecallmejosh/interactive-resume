@@ -4,7 +4,7 @@ var work = {
       "employer" : "Sports Technologies, LLC",
       "employerLogo" : "img/logos/sti.png",
       "employerUrl" : "http://www.sportstechinc.com",
-      "title" : "Front End Developer",
+      "title" : "Front End Dev",
       "location" : "Collinsville, CT",
       "dates" : "June 13 - Present",
       "description" : "<p>Front End Design and Development of Fantasy Sports Applications.</p><p>We develop awesome gaming apps for professional sports organizations.</p><p>Primary responsibilities include Haml, Sass, JS/JQuery development in RoR stack.</p>"
@@ -13,7 +13,7 @@ var work = {
       "employer" : "East Point Systems, Inc",
       "employerLogo" : "img/logos/eps.png",
       "employerUrl" : "http://www.eastpointsystems.com",
-      "title" : "Front End Developer",
+      "title" : "Front End Dev",
       "location" : "East Hartford, CT",
       "dates" : "Jan 13 - May 13",
       "description" : "<p>Front End Design & Development of social business application.</p><p>Lead UX/UI designer on short term, large scale web application.</p><p>Saved company $10K/year by minimizing server side dependencies on company website.</p>"
