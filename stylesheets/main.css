@@ -254,13 +254,22 @@ html {
 }
 
 #mapDiv {
-  height: 27em;
   width: 100%;
   position: relative;
   z-index: 100;
   overflow: hidden;
   *zoom: 1;
   margin-bottom: 1.5em;
+}
+@media (min-width: 769px) {
+  #mapDiv {
+    height: 27em;
+  }
+}
+@media (min-width: 1px) and (max-width: 768px) {
+  #mapDiv {
+    height: 13.5em;
+  }
 }
 
 .nav__contact {
@@ -453,6 +462,7 @@ html {
 }
 
 .row {
+  margin-bottom: 1.5em;
   width: 90%;
 }
 [class*="col--"] > .row {
@@ -589,18 +599,22 @@ header {
   text-shadow: 1px 1px 0 #fff;
 }
 
-.work-entry, .project-entry {
+.work-entry, .project-entry, .education-entry {
   background-color: #fff;
   padding: 16px;
 }
-.work-entry > a, .project-entry > a {
+.work-entry > a, .project-entry > a, .education-entry > a {
   display: block;
   font-size: 1.25em;
   line-height: 1.2em;
   margin-bottom: 1.5em;
 }
-.work-entry p, .project-entry p {
+.work-entry p, .project-entry p, .education-entry p {
   margin-bottom: 1.5em;
+}
+
+.major {
+  margin-right: 0.75em;
 }
 
 footer {

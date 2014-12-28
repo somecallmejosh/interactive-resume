@@ -32,8 +32,10 @@ var HTMLheaderName = "<h1 class='identity__title'>%data%</h1>",
 // Work Information.
 // -----------------------------------------------------------------------------
 var HTMLworkStart = "<div class='col--3 work-entry'></div>",
-    HTMLworkEmployer = "<a href='#'>%data%",
-    HTMLworkTitle = " - %data%</a>",
+    HTMLemployerLogo = "<img src='%data%' class='img-responsive'>",
+    HTMLemployerURL = "<a href='%data%' target='_blank'>",
+    HTMLworkEmployer = "%data%</a>",
+    HTMLworkTitle = "<h2>%data%</h2>",
     HTMLworkDates = "<div class='date-text'>%data%</div>",
     HTMLworkLocation = "<div>%data%</div>",
     HTMLworkDescription = "%data%";
@@ -43,12 +45,13 @@ var HTMLworkStart = "<div class='col--3 work-entry'></div>",
 // -----------------------------------------------------------------------------
 
 // Traditional Education
-var HTMLschoolStart = "<div class='education-entry'></div>",
-    HTMLschoolName = "<a href='#'>%data%",
-    HTMLschoolDegree = " -- %data%</a>",
-    HTMLschoolDates = "<div class='date-text'>%data%</div>",
+var HTMLschoolStart = "<div class='col--6 education-entry'></div>",
+    HTMLschoolUrl = "<h3><a href='%data%'>",
+    HTMLschoolName = "%data%</a></h3>",
+    HTMLschoolDegree = "<h2>%data%</h2>",
+    HTMLschoolDates = "<p>%data%</p>",
     HTMLschoolLocation = "<div class='location-text'>%data%</div>",
-    HTMLschoolMajor = "<em>Major: %data%</em>";
+    HTMLschoolMajor = "<span class='major'>%data%</span>";
 
 // Online Education
 var HTMLonlineClasses = "<h3>Online Classes</h3>",

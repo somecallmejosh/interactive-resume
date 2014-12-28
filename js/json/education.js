@@ -2,20 +2,23 @@ var education = {
   "schools" : [
     {
       "name" : "Troy University",
+      "schoolUrl" : "http://www.troy.edu",
       "location" : "Troy, AL",
-      "degree" : "Bachelors",
+      "degree" : "Bachelor of Science",
       "dates" : 2001,
       "majors" : [
-        "Biology"
+        "General Biology Major",
+        "Chemistry Minor"
       ]
     },
     {
       "name" : "City Colleges of Chicago",
+      "schoolUrl" : "http://www.ccc.edu/colleges/washington/Pages/default.aspx",
       "location" : "Hohenfels, Germany",
-      "degree" : "Associates",
+      "degree" : "Associate of Arts and Science",
       "dates" : 1997,
       "majors" : [
-        "General Studies"
+        "General Studies Major"
       ]
     }
   ],
@@ -53,30 +56,27 @@ var education = {
   ],
   "display" : function() {
     for(school in education.schools) {
-      var schoolPath = education.schools[school];
+      var schoolPath = education.schools[school],
+          formattedName = HTMLschoolName.replace("%data%", schoolPath.name),
+          formattedUrl = HTMLschoolUrl.replace("%data%", schoolPath.schoolUrl),
+          formattedDegree = HTMLschoolDegree.replace("%data%", schoolPath.degree),
+          formattedDates = HTMLschoolDates.replace("%data%", schoolPath.dates),
+          formattedLocation = HTMLschoolLocation.replace("%data%", schoolPath.location);
+
       $("#education .items--school").append(HTMLschoolStart);
-
-      var formattedName = HTMLschoolName.replace("%data%", schoolPath.name);
-      $(".education-entry:last").append(formattedName);
-
-      var formattedDegree = HTMLschoolDegree.replace("%data%", schoolPath.degree);
-      $(".education-entry:last").append(formattedDegree);
-
-      var formattedDates = HTMLschoolDates.replace("%data%", schoolPath.dates);
-      $(".education-entry:last").append(formattedDates);
-
-      var formattedLocation = HTMLschoolLocation.replace("%data%", schoolPath.location);
-      $(".education-entry:last").append(formattedLocation);
-
-      var formattedMajor = HTMLschoolMajor.replace("%data%", schoolPath.major);
-      $(".education-entry:last").append(formattedMajor);
-
-      if(schoolPath.majors.length > 0) {
-        for(major in schoolPath.majors) {
-          var formattedMajors = HTMLschoolMajor.replace("%data%", schoolPath.majors[major]);
-          $(".education-entry:last").append(formattedMajors);
+      $(".education-entry:last")
+        .append(formattedDegree)
+        .append(formattedUrl + formattedName)
+        .append(formattedLocation)
+        .append(formattedDates);
+        if(schoolPath.majors.length > 0) {
+          for(major in schoolPath.majors) {
+            var formattedMajors = HTMLschoolMajor.replace("%data%", schoolPath.majors[major]);
+            $(".education-entry:last").append(formattedMajors);
+          }
         }
-      }
+
+
 
     }
   }

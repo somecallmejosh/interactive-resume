@@ -2,7 +2,10 @@
   display: block
   height: 100%
 #mapDiv
-  height: rhythm(18)
+  +mq(medium)
+    height: rhythm(18)
+  +mq(small)
+    height: rhythm(9)
   width: 100%
   position: relative
   z-index: $z-middle
