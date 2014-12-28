@@ -30,12 +30,19 @@
   </div>
 
 
-  <div id="education" class="row">
+  <div id="education--college" class="row">
     <h2>Education</h2>
     <div class="items--school">
+      <h3>College</h3>
       <!-- injected via javascript -->
     </div>
-    <div class="items--online-classes"><!-- injected via javascript --></div>
+  </div>
+
+  <div id="education--courses" class="row">
+    <div class="items--online-courses">
+      <h3>Online Courses</h3>
+      <!-- injected via javascript -->
+    </div>
   </div>
 
   <div class="row">
@@ -64,9 +71,6 @@
     // These come from the original repo
     if(document.getElementsByClassName('work-entry').length === 0) {
       document.getElementById('workExperience').style.display = 'none';
-    }
-    if(document.getElementsByClassName('education-entry').length === 0) {
-      document.getElementById('education').style.display = 'none';
     }
   </script>
 </body>

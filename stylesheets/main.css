@@ -511,6 +511,7 @@ h2 {
 h3 {
   font-size: 1.25em;
   line-height: 1.2em;
+  margin-bottom: 0.75em;
 }
 
 header {
@@ -599,18 +600,25 @@ header {
   text-shadow: 1px 1px 0 #fff;
 }
 
-.work-entry, .project-entry, .education-entry {
+.work-entry, .project-entry, .college-entry, .course-entry {
   background-color: #fff;
   padding: 16px;
 }
-.work-entry > a, .project-entry > a, .education-entry > a {
+.work-entry > a, .project-entry > a, .college-entry > a, .course-entry > a {
   display: block;
   font-size: 1.25em;
   line-height: 1.2em;
   margin-bottom: 1.5em;
 }
-.work-entry p, .project-entry p, .education-entry p {
+.work-entry p, .project-entry p, .college-entry p, .course-entry p {
   margin-bottom: 1.5em;
+}
+
+.course-entry {
+  margin-bottom: 1.5em;
+}
+.course-entry p {
+  margin-bottom: 0em;
 }
 
 .major {

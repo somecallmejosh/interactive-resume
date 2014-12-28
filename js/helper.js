@@ -45,7 +45,7 @@ var HTMLworkStart = "<div class='col--3 work-entry'></div>",
 // -----------------------------------------------------------------------------
 
 // Traditional Education
-var HTMLschoolStart = "<div class='col--6 education-entry'></div>",
+var HTMLschoolStart = "<div class='col--6 college-entry'></div>",
     HTMLschoolUrl = "<h3><a href='%data%'>",
     HTMLschoolName = "%data%</a></h3>",
     HTMLschoolDegree = "<h2>%data%</h2>",
@@ -54,11 +54,12 @@ var HTMLschoolStart = "<div class='col--6 education-entry'></div>",
     HTMLschoolMajor = "<span class='major'>%data%</span>";
 
 // Online Education
-var HTMLonlineClasses = "<h3>Online Classes</h3>",
-    HTMLonlineTitle = "<a href='#'>%data%",
-    HTMLonlineSchool = " - %data%</a>",
-    HTMLonlineDates = "<div class='date-text'>%data%</div>",
-    HTMLonlineURL = "<a href='#'>%data%</a>";
+var HTMLCourseStart = "<div class='course-entry'></div>",
+    HTMLcourseTitle = "<h2>%data% - ",
+    HTMLcourseSchool = "%data%</h2>",
+    HTMLcourseDescription = "<p>%data%</p>",
+    HTMLcourseDates = "<p>%data%</p>",
+    HTMLcourseURL = "<p><a href='%data%' target='_blank'>View Course</a></p>";
 
 // -----------------------------------------------------------------------------
 // Project Information.

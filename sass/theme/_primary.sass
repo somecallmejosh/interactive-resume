@@ -12,6 +12,7 @@ h2
   +adjust-font-size-to(24px)
 h3
   +adjust-font-size-to(20px)
+  +margin-trailer(.5)
 header
   display: block
   +trailing-border
@@ -73,7 +74,7 @@ header
     +adjust-leading-to(1.5, 30px)
     +text-shadow
 
-.work-entry, .project-entry, .education-entry
+.work-entry, .project-entry, .college-entry, .course-entry
   background-color: $white
   padding: $padding-double
   > a
@@ -82,7 +83,10 @@ header
     +margin-trailer
   p
     +margin-trailer
-
+.course-entry
+  +margin-trailer
+  p
+    +margin-trailer(0)
 .major
   margin-right: rhythm(.5)
 
