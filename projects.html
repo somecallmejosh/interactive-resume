@@ -22,8 +22,8 @@
   </header>
 
   <div class="row main">
-    <h1>Projects</h1>
     <div id="projects">
+      <h1>Projects</h1>
       <div class="items"><!-- injected via javascript --></div>
     </div>
   </div>
@@ -41,5 +41,10 @@
   <script src="js/json/bio.js"></script>
   <script src="js/json/projects.js"></script>
   <script src="js/resumeBuilder.js"></script>
+  <script>
+    if(document.getElementsByClassName('project-entry').length === 0) {
+      document.getElementById('projects').style.display = 'none';
+    }
+  </script>
 </body>
 </html>
