@@ -65,7 +65,8 @@ var HTMLCourseStart = "<div class='course-entry'></div>",
 // Project Information.
 // -----------------------------------------------------------------------------
 var HTMLprojectStart = "<div class='col--4 project-entry'></div>",
-    HTMLprojectTitle = "<a href='#'>%data%</a>",
+    HTMLprojectUrl = "<a href='%data%' target='_blank'>",
+    HTMLprojectTitle = "%data%</a>",
     HTMLprojectDates = "<div class='date-text'>%data%</div>",
     HTMLprojectDescription = "<p>%data%</p>",
     HTMLprojectImage = "<img src='%data%' class='img-responsive'>";

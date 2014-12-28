@@ -604,6 +604,10 @@ header {
   background-color: #fff;
   padding: 16px;
 }
+.work-entry h2, .project-entry h2, .college-entry h2, .course-entry h2 {
+  text-transform: uppercase;
+  font-weight: 700;
+}
 .work-entry > a, .project-entry > a, .college-entry > a, .course-entry > a {
   display: block;
   font-size: 1.25em;
@@ -612,6 +616,10 @@ header {
 }
 .work-entry p, .project-entry p, .college-entry p, .course-entry p {
   margin-bottom: 1.5em;
+}
+
+.work-entry h2, .work-entry a {
+  text-align: center;
 }
 
 .course-entry {

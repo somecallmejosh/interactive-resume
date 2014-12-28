@@ -4,6 +4,7 @@ var projects = {
       "title" : "Kenwood Dennard",
       "dates" : "Aug 2014",
       "description" : "AngularFire website that allows easy direct editing of page contents.",
+      "url" : "https://github.com/somecallmejosh/kenwood-angularfire",
       "images" : [
         "img/projects/kenwood-dennard.png",
         "img/projects/kenwood-editable.png"
@@ -13,6 +14,7 @@ var projects = {
       "title" : "Chase The Kicker",
       "dates" : "Jul 2013 - May 2014",
       "description" : "College recruiting website that displays seasonal statistics and video highlights.",
+      "url" : "https://github.com/somecallmejosh/chasethekicker",
       "images" : [
         "img/projects/chase-the-kicker.png",
         "img/projects/chase-the-kicker-bio.png"
@@ -21,6 +23,7 @@ var projects = {
     {
       "title" : "CT Drummers Association",
       "dates" : "Jan 2012 - Present",
+      "url" : "http://ctdrummers.org/",
       "description" : "Fundraising website to earn scholarship money for college bound drummers.",
       "images" : [
         "img/projects/ct-crummers.png"
@@ -29,17 +32,17 @@ var projects = {
   ],
   "display" : function() {
     for (var project in projects.projects) {
-      var objPath = projects.projects[project];
+      var objPath = projects.projects[project],
+          formattedUrl = HTMLprojectUrl.replace("%data%", objPath.url)
+          formattedTitle = HTMLprojectTitle.replace("%data%", objPath.title),
+          formattedDates = HTMLprojectDates.replace("%data%", objPath.dates),
+          formattedDescription = HTMLprojectDescription.replace("%data%", objPath.description);
 
       $("#projects .items").append(HTMLprojectStart);
-      var formattedTitle = HTMLprojectTitle.replace("%data%", objPath.title);
-      $(".project-entry:last").append(formattedTitle);
-
-      var formattedDates = HTMLprojectDates.replace("%data%", objPath.dates);
-      $(".project-entry:last").append(formattedDates);
-
-      var formattedDescription = HTMLprojectDescription.replace("%data%", objPath.description);
-      $(".project-entry:last").append(formattedDescription);
+      $(".project-entry:last")
+        .append(formattedUrl + formattedTitle)
+        .append(formattedDates)
+        .append(formattedDescription);
 
       if(objPath.images.length > 0) {
         for(var image in objPath.images) {

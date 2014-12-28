@@ -77,12 +77,18 @@ header
 .work-entry, .project-entry, .college-entry, .course-entry
   background-color: $white
   padding: $padding-double
+  h2
+    text-transform: uppercase
+    font-weight: 700
   > a
     display: block
     +adjust-font-size-to(20px)
     +margin-trailer
   p
     +margin-trailer
+.work-entry
+  h2, a
+    text-align: center
 .course-entry
   +margin-trailer
   p
