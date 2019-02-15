@@ -1,5 +1,2 @@
 .DS_Store
-.sass-cache
 node_modules/
-.ruby-*
-bower_components/
